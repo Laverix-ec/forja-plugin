@@ -16,7 +16,9 @@ Do this before changing any code. Mark each step in the checklist.
 - **S3** <!-- AC-DEV-002.2 -->Before touching code, read the whole contract and
   the Project's skills: call `list_skills` (General and Development always;
   pass `category` "task" too) and `read_skill` with `skill` for each one whose
-  `triggerDescription` applies. At least read the Git and the verification ones.
+  `triggerDescription` applies, and for each one whose `triggerDescription` is
+  `null` (its "Use when" section is missing: read it to decide). At least read
+  the Git and the verification ones.
   Then check the contract against the current code: the reference commit of its
   "starting state" and the files in its "read first" list.
   - <!-- AC-DEV-002.3 -->If it does not match and the adjustment does not change

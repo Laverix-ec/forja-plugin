@@ -1,6 +1,6 @@
 {
   "name": "forja-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Forja plugin: the Forja method for the coding agents of developers.",
