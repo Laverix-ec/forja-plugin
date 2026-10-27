@@ -1,7 +1,7 @@
 {
   "name": "forja",
   "description": "The Forja method for coding agents: start, execute, verify, integrate and report a Work Order through the Forja MCP server.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Laverix"
   }
