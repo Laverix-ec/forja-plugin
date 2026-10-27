@@ -67,3 +67,7 @@ Edit only `src/forja/`, `plugin.config.json` and `package.json` (the only place
 of the version). Then run `npm run build` and `npm test`, and commit the
 generated files (`skills/`, `.claude-plugin/`, `.cursor-plugin/`,
 `.codex-plugin/`, `.agents/`). CI fails if they are not up to date.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

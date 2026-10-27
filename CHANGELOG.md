@@ -7,3 +7,4 @@
 - Manifests for Claude Code, Cursor and Codex generated from one source;
   Antigravity reads the same `skills/forja` folder.
 - CI that validates manifests, links and traceability to the criteria.
+- MIT license.

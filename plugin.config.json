@@ -4,5 +4,6 @@
   "description": "The Forja method for coding agents: start, execute, verify, integrate and report a Work Order through the Forja MCP server.",
   "author": "Laverix",
   "repository": "https://github.com/Laverix-ec/forja-plugin",
+  "license": "MIT",
   "keywords": ["forja", "work-orders", "mcp", "workflow"]
 }

@@ -6,6 +6,7 @@
     "name": "Laverix"
   },
   "repository": "https://github.com/Laverix-ec/forja-plugin",
+  "license": "MIT",
   "keywords": [
     "forja",
     "work-orders",
