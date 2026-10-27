@@ -1,0 +1,8 @@
+{
+  "name": "forja",
+  "marketplace": "forja-plugin",
+  "description": "The Forja method for coding agents: start, execute, verify, integrate and report a Work Order through the Forja MCP server.",
+  "author": "Laverix",
+  "repository": "https://github.com/Laverix-ec/forja-plugin",
+  "keywords": ["forja", "work-orders", "mcp", "workflow"]
+}
