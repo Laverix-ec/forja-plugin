@@ -1,0 +1,17 @@
+{
+  "tools": [
+    "get_work_order",
+    "claim_work_order",
+    "release_work_order",
+    "record_test_run",
+    "create_evidence_upload",
+    "deliver_work_order",
+    "list_findings",
+    "report_finding",
+    "link_pull_request",
+    "comment_work_order",
+    "list_skills",
+    "read_skill",
+    "search_project"
+  ]
+}
