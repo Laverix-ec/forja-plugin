@@ -7,10 +7,11 @@ as `[ ]`. Each `[SKIP]` goes to the delivery report as an informative item.
 ## start
 - [ ] S1 Read the Work Order and its contract
 - [ ] S2 Create `.forja/WO-N/` and this checklist
-- [ ] S3 Read the Project skills and check the contract against the code
-- [ ] S4 Take the Work Order and create the branch
-- [ ] S5 Tell the developer about overlaps with other Work Orders
-- [ ] S6 Isolated environment
+- [ ] S3 Check that this checkout is the repository of the Work Order
+- [ ] S4 Read the Project skills and check the contract against the code
+- [ ] S5 Take the Work Order and create the branch
+- [ ] S6 Tell the developer about overlaps with other Work Orders
+- [ ] S7 Isolated environment
 
 ## execute
 - [ ] E1 Follow the Plan in order
