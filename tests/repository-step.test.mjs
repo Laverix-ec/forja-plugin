@@ -34,6 +34,11 @@ test("S3 forbids taking the Work Order and skips without repository", () => {
   assert.ok(s3.includes("[SKIP] no repository"));
 });
 
+test("S3 deletes the checklist folder whenever it stops", () => {
+  const deletes = s3.match(/delete the `\.forja\/WO-N\/`/gi) ?? [];
+  assert.equal(deletes.length, 2);
+});
+
 test("the checklist has the S3 line naming the repository", () => {
   assert.match(read("src/forja/templates/checklist.md"), /- \[ \] S3 .*repository/);
 });

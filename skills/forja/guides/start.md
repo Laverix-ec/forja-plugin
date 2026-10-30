@@ -21,7 +21,8 @@ Do this before changing any code. Mark each step in the checklist.
   - Otherwise run `git remote get-url origin` in the checkout where you will
     work (only `origin`, no other remote). If the command fails (not a
     repository, or no `origin`), you cannot confirm it: do not take the Work
-    Order, tell the developer and stop.
+    Order, tell the developer, delete the `.forja/WO-N/` that S2 created here
+    and stop.
   - Normalize the result to `owner/name`: take what follows the host, without
     the leading slash, the trailing slash and the `.git` suffix. It works for
     HTTPS (also with credentials) and SSH. Never repeat credentials when you
