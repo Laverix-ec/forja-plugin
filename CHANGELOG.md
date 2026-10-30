@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0
+
+- Guide `start`: before taking a Work Order, compare its `repository` with the
+  `origin` of the checkout; if they differ, do not take it and tell the
+  developer where it goes (Forja WO-140). A Work Order without `repository`
+  goes on as before.
+
 ## 0.1.1
 
 - Guide `start`: a skill listed with `triggerDescription: null` (no "Use when"
