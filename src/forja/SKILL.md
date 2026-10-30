@@ -27,7 +27,8 @@ the Forja team. Do not improvise with other tools. The same list is in
 ## The cycle
 
 1. [start](guides/start.md): read the Work Order, its contract and the Project's
-   skills; check the contract against the code; take the Work Order and create
+   skills; check that the checkout is the repository of the Work Order, then
+   check the contract against the code; take the Work Order and create
    the branch.
 2. [execute](guides/execute.md): follow the Plan in order, with a checklist, and
    stop when the contract says so.
