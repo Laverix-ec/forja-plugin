@@ -1,3 +1,4 @@
+import { spawnSync } from "node:child_process";
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -26,3 +27,20 @@ export const listFiles = (directory) => {
 };
 
 export const GUIDES = ["start", "execute", "verify", "integrate", "report"];
+
+// Runs a hook script of src/hooks/scripts/ as Claude Code does: the JSON input
+// goes to stdin; the result is the exit status and the two output streams.
+export const runHook = (script, toolName, toolInput) =>
+  spawnSync(
+    process.execPath,
+    [join(root, "src", "hooks", "scripts", script)],
+    {
+      encoding: "utf8",
+      input: JSON.stringify({
+        hook_event_name: "PreToolUse",
+        tool_name: toolName,
+        tool_input: toolInput,
+        cwd: "/r",
+      }),
+    }
+  );

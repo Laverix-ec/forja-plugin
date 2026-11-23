@@ -41,6 +41,11 @@ export const build = (root) => {
       fail(`missing source file src/forja/${file}`);
     }
   }
+  for (const file of ["hooks.json", "scripts"]) {
+    if (!existsSync(join(root, "src", "hooks", file))) {
+      fail(`missing source file src/hooks/${file}`);
+    }
+  }
   const config = readJson(join(root, "plugin.config.json"));
   const { version } = readJson(join(root, "package.json"));
   if (typeof version !== "string" || !SEMVER.test(version)) {
@@ -54,6 +59,18 @@ export const build = (root) => {
   writeJson(root, join("skills", config.name, "required-tools.json"), {
     version,
     tools: tools.tools,
+  });
+
+  // Brakes for Claude Code: hooks/hooks.json loads by itself, scripts/ holds them.
+  rmSync(join(root, "hooks"), { force: true, recursive: true });
+  rmSync(join(root, "scripts"), { force: true, recursive: true });
+  mkdirSync(join(root, "hooks"), { recursive: true });
+  cpSync(
+    join(root, "src", "hooks", "hooks.json"),
+    join(root, "hooks", "hooks.json")
+  );
+  cpSync(join(root, "src", "hooks", "scripts"), join(root, "scripts"), {
+    recursive: true,
   });
 
   const author = { name: config.author };
