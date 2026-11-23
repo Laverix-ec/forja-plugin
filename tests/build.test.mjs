@@ -6,7 +6,7 @@ import { test } from "node:test";
 import { build } from "../build/build.mjs";
 import { listFiles, read, root } from "./helpers.mjs";
 
-const GENERATED = [".claude-plugin", ".cursor-plugin", ".codex-plugin", ".agents", "skills"];
+const GENERATED = [".claude-plugin", ".cursor-plugin", ".codex-plugin", ".agents", "skills", "hooks", "scripts"];
 
 test("the build is deterministic and idempotent", () => {
   const copy = mkdtempSync(join(tmpdir(), "forja-plugin-"));

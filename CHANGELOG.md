@@ -8,6 +8,8 @@
 - Guide `verify` V7: run again the tests of what changed after the complete
   verification and say so in the delivery report.
 - Guide `execute` E5: in a Fix, the first commit is the test that fails.
+- Claude Code brakes (hooks/PreToolUse): deny reading secrets files with Read,
+  Grep, Glob and shell commands, and pkill/pgrep with -f (Forja WO-302).
 
 ## 0.2.0
 
