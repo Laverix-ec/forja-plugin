@@ -20,3 +20,8 @@
   pending items, not to a file of the repository.
 - **V6** If verifying needs test data that cannot be guessed, say so in the
   report.
+- **V7** <!-- AC-DEV-003.5 -->If the code changes after the complete verification
+  of V1 (for example, to apply a review fix), run again the tests that the change
+  affects before committing, and say in the delivery report what changed and what
+  you ran again (an informative item, see [report](report.md)). It does not
+  replace V2: the commit still depends on the exit code.

@@ -13,3 +13,8 @@
 - **E4** Adjustments against the contract that do not change the scope are noted
   for the delivery report (see [start](start.md)). Never invent a verifiable fact
   (a commit, a version, a count): get it with the command that gives it.
+- **E5** <!-- AC-DEV-003.6 -->If the `type` of `get_work_order` is `fix`, your
+  first commit is the test that fails because of the defect, before any code that
+  fixes it: show that it fails (and that the rest of the suite passes) before
+  going on. The second commit is the fix, and from there V2 applies as always. A
+  Work Order of another type does not change.

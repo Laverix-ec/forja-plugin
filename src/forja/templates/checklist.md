@@ -18,6 +18,7 @@ as `[ ]`. Each `[SKIP]` goes to the delivery report as an informative item.
 - [ ] E2 Keep this checklist up to date
 - [ ] E3 Stop and escalate on a stop condition
 - [ ] E4 Note adjustments against the contract
+- [ ] E5 Start a Fix with the failing test
 
 ## verify
 - [ ] V1 Verify by rounds
@@ -26,6 +27,7 @@ as `[ ]`. Each `[SKIP]` goes to the delivery report as an informative item.
 - [ ] V4 Test visible changes in a real browser
 - [ ] V5 Review your own work by dimensions
 - [ ] V6 Say which test data could not be guessed
+- [ ] V7 Run again the tests of anything changed after the verification
 
 ## integrate
 - [ ] I1 Bring the branch up to date and verify again
