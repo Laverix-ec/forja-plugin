@@ -2,7 +2,8 @@
 
 The Forja method for the coding agents of developers. It gives your agent one
 way to start, execute, verify, integrate and report a Forja Work Order through
-the Forja MCP server: a router skill (`forja`), five guides and a checklist.
+the Forja MCP server: a router skill (`forja`), six guides (five for the steps of a Work Order and one with
+safety rules) and a checklist.
 
 The plugin does not carry the rules of your Project (Git, linter, commands,
 language). Those come from the Project's skills in Forja, which the agent reads

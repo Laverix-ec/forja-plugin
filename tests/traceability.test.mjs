@@ -4,16 +4,22 @@ import { GUIDES, read } from "./helpers.mjs";
 
 const CRITERIA = {
   start: ["002.1", "002.2", "002.3", "002.4", "002.5", "002.6", "002.7"],
-  execute: ["003.1", "003.2"],
-  verify: ["003.3", "003.4"],
+  execute: ["003.1", "003.2", "003.6"],
+  verify: ["003.3", "003.4", "003.5"],
   integrate: ["004.1", "004.2", "004.3", "004.4"],
   report: ["004.5"],
+  safety: ["005.1", "005.2", "005.3", "005.4"],
 };
 const STEPS = { start: "S", execute: "E", verify: "V", integrate: "I", report: "R" };
 
-const files = ["SKILL", "templates/checklist", ...GUIDES.map((g) => `guides/${g}`)];
+const files = [
+  "SKILL",
+  "templates/checklist",
+  "guides/safety",
+  ...GUIDES.map((g) => `guides/${g}`),
+];
 
-test("each of the 16 criteria has its marker in its guide and only there", () => {
+test("each of the 22 criteria has its marker in its guide and only there", () => {
   let total = 0;
   for (const [guide, ids] of Object.entries(CRITERIA)) {
     for (const id of ids) {
@@ -25,7 +31,7 @@ test("each of the 16 criteria has its marker in its guide and only there", () =>
       }
     }
   }
-  assert.equal(total, 16);
+  assert.equal(total, 22);
 });
 
 test("each checklist step is in its guide and in the template", () => {
@@ -41,7 +47,7 @@ test("each checklist step is in its guide and in the template", () => {
     }
   }
   const templateIds = [...template.matchAll(/\] ([SEVIR]\d) /g)].length;
-  assert.equal(templateIds, 28);
+  assert.equal(templateIds, 30);
 });
 
 test("guides are in English", () => {
