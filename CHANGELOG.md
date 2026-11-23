@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0
+
+- Guide `safety` (new): rules that apply at every step: do not read secrets
+  files, do not get around a block, add files to a commit by exact path, stop
+  only your own processes (Forja WO-300).
+- Guide `verify` V7: run again the tests of what changed after the complete
+  verification and say so in the delivery report.
+- Guide `execute` E5: in a Fix, the first commit is the test that fails.
+
 ## 0.2.0
 
 - Guide `start`: before taking a Work Order, compare its `repository` with the
