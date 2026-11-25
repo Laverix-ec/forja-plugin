@@ -5,7 +5,7 @@ import { commandNamesSecret } from "./lib/secrets.mjs";
 const data = await readInput();
 if (data) {
   const command = data.tool_input?.command;
-  const name = commandNamesSecret(command);
+  const name = commandNamesSecret(command, data.cwd);
   if (name) {
     deny("A1", `this command names a secrets file (${name}).`);
   }
