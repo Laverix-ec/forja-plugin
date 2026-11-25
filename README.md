@@ -90,7 +90,15 @@ Know what they are:
 - **They need Node on the `PATH`.** If it is missing, Claude Code shows a hook
   error and lets the action go on: the brake does not act.
 - **They block more than they need, on purpose.** A command that only mentions a
-  secrets file name is denied too, for example `grep -n ".env" README.md`.
+  secrets file name is denied too, for example `grep -n ".env" README.md`. The
+  one exception is `*.key`, which is also the end of common code: in a shell
+  command, a word ending in `.key` counts as a key file only if it has a path
+  (`certs/server.key`), starts with `~` or is a file that exists in the working
+  directory. So code such as `event.key` or `dataset.key`, and a Next dynamic
+  segment such as `app/[...key]/route.ts`, pass. The working directory is the
+  one before the command runs: a `cd` inside the same command is not followed
+  (`cd keys && cat server.key` passes; `cd keys && cat ./server.key` is denied
+  by its path).
 - **They are a barrier, not a wall.** They do not see what a script builds
   (`python -c`), a variable, a path built on the fly, a pipe such as
   `ps | grep | kill` (rule A4 forbids it, but no brake checks it), or a search of

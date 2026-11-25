@@ -30,7 +30,9 @@ export const GUIDES = ["start", "execute", "verify", "integrate", "report"];
 
 // Runs a hook script of src/hooks/scripts/ as Claude Code does: the JSON input
 // goes to stdin; the result is the exit status and the two output streams.
-export const runHook = (script, toolName, toolInput) =>
+// cwd is the working directory the input reports (by default one that does not
+// exist).
+export const runHook = (script, toolName, toolInput, cwd = "/r") =>
   spawnSync(
     process.execPath,
     [join(root, "src", "hooks", "scripts", script)],
@@ -40,7 +42,7 @@ export const runHook = (script, toolName, toolInput) =>
         hook_event_name: "PreToolUse",
         tool_name: toolName,
         tool_input: toolInput,
-        cwd: "/r",
+        cwd,
       }),
     }
   );

@@ -10,6 +10,9 @@
 - Guide `execute` E5: in a Fix, the first commit is the test that fails.
 - Claude Code brakes (hooks/PreToolUse): deny reading secrets files with Read,
   Grep, Glob and shell commands, and pkill/pgrep with -f (Forja WO-302).
+- Shell brake: a word ending in the key-file suffix is denied only if it has a
+  path, starts with ~ or is a file in the working directory, so code such as
+  event.key passes (Forja WO-343).
 
 ## 0.2.0
 
